@@ -35,12 +35,14 @@ ordered collections of data items of the same type.
 
 <br>
 
-::: r-fit-size
-|              |                                                                                            |                                            |
-|-------------------|-----------------------------------|-------------------|
-| Tupples      | A tuple is a collection which is ordered and unchangeable.                                 | (1, 2, 3, 4)                               |
-| Sets         | A set is a collection which is unordered, unchangeable, and unindexed.                     | {1, 2, 3, 4}                               |
-| Dictionaries | A dictionary is a collection which is ordered\*, changeable and does not allow duplicates. | {key1: value1, key2: value2, key3:value3 } |
+::: r-fit-text
++-----------------+--------------------------------------------------------------------------------------------+--------------------------------------------+
+| Tupples         | A tuple is a collection which is ordered and unchangeable.                                 | (1, 2, 3, 4)                               |
++-----------------+--------------------------------------------------------------------------------------------+--------------------------------------------+
+| Sets            | A set is a collection which is unordered, unchangeable, and unindexed.                     | {1, 2, 3, 4}                               |
++-----------------+--------------------------------------------------------------------------------------------+--------------------------------------------+
+| Dictionaries    | A dictionary is a collection which is ordered\*, changeable and does not allow duplicates. | {key1: value1, key2: value2, key3:value3 } |
++-----------------+--------------------------------------------------------------------------------------------+--------------------------------------------+
 :::
 
 ## Dictionary
@@ -61,32 +63,30 @@ print(country_roads)
 
 ## Data science libraries in Python
 
-::: r-fit-size
+::: r-fit-text
 Listed below are the major libraries that provide built-in functions, methods, and constants that are important for doing data science analysis. Each library has a website with documentation (remember the Python Standard Library) that is great for reference and tutorials.
 
-### Storage, Manipulations, Calculations
++------------------------------------------------------------------+------------------------------------------------+
+| ### Storage, Manipulations, Calculations                         | ### Visualization                              |
+|                                                                  |                                                |
+| -   [Numpy](https://numpy.org/)                                  | -   [Matplotlib](https://matplotlib.org/)      |
+|                                                                  |                                                |
+| -   [Pandas](https://pandas.pydata.org/)                         | -   [Bokeh](https://bokeh.org/)                |
+|                                                                  |                                                |
+| -   [Scipy](https://www.scipy.org/scipylib/index.html)           |                                                |
+|                                                                  |                                                |
+| -   [StatsModels](https://www.statsmodels.org/stable/index.html) |                                                |
++------------------------------------------------------------------+------------------------------------------------+
+|                                                                  | ### Machine Learning                           |
+|                                                                  |                                                |
+|                                                                  | -   [SciKit](https://scikit-learn.org/stable/) |
+|                                                                  |                                                |
+|                                                                  | -   [TensorFlow](https://www.tensorflow.org/)  |
+|                                                                  |                                                |
+|                                                                  | -   [Keras](https://keras.io/)                 |
++------------------------------------------------------------------+------------------------------------------------+
 
--   [Numpy](https://numpy.org/)
-
--   [Pandas](https://pandas.pydata.org/)
-
--   [Scipy](https://www.scipy.org/scipylib/index.html)
-
--   [StatsModels](https://www.statsmodels.org/stable/index.html)
-
-### Visualization
-
--   [Matplotlib](https://matplotlib.org/)
-
--   [Bokeh](https://bokeh.org/)
-
-### Machine Learning
-
--   [SciKit](https://scikit-learn.org/stable/)
-
--   [TensorFlow](https://www.tensorflow.org/)
-
--   [Keras](https://keras.io/)
+### 
 :::
 
 ## Series
@@ -116,7 +116,7 @@ Each variable (column) in a DataFrame typically contains data of the same type (
 
 ## Step 1: Create Series
 
-::: r-fit-size
+::: r-fit-text
 -   All Series must have the same size to combine them later.
 -   For this example, we're creating four Series: year, title, length, and gross, representing movie data.
 
@@ -150,7 +150,7 @@ gross = pd.Series([787, 534, 572], name="Gross")
 
 ## Step 2: Merge the Series into a data frame
 
-::: r-fit-size
+::: r-fit-text
 ```{python}
 #| label: merge_series
 #| echo: true
@@ -212,18 +212,26 @@ starwars_df.to_csv("starwars.csv", index=False)
 
 ## Importing/Reading Data
 
-::: r-fit-size
-|            |                                                                                                          |
-|-----------------|-------------------------------------------------------|
-| read_csv   | Load delimited data from a file, URL, or file-like object; use comma as default delimiter                |
-| read_fwf   | Read data in fixed-width column format (i.e., no delimiters)                                             |
-| read_excel | Read tabular data from an Excel XLS or XLSX file                                                         |
-| read_html  | Read all tables found in the given HTML document                                                         |
-| read_json  | Read data from a JSON (JavaScript Object Notation) string representation, file, URL, or file-like object |
-| read_sas   | Read a SAS dataset stored in one of the SAS system's custom storage formats                              |
-| read_spss  | Read a data file created by SPSS                                                                         |
-| read_stata | Read a data set from Stata file format                                                                   |
-| read_xml   | Read a table of data from an XML file                                                                    |
+::: r-fit-text
++----------------+----------------------------------------------------------------------------------------------------------+
+| read_csv       | Load delimited data from a file, URL, or file-like object; use comma as default delimiter                |
++----------------+----------------------------------------------------------------------------------------------------------+
+| read_fwf       | Read data in fixed-width column format (i.e., no delimiters)                                             |
++----------------+----------------------------------------------------------------------------------------------------------+
+| read_excel     | Read tabular data from an Excel XLS or XLSX file                                                         |
++----------------+----------------------------------------------------------------------------------------------------------+
+| read_html      | Read all tables found in the given HTML document                                                         |
++----------------+----------------------------------------------------------------------------------------------------------+
+| read_json      | Read data from a JSON (JavaScript Object Notation) string representation, file, URL, or file-like object |
++----------------+----------------------------------------------------------------------------------------------------------+
+| read_sas       | Read a SAS dataset stored in one of the SAS system's custom storage formats                              |
++----------------+----------------------------------------------------------------------------------------------------------+
+| read_spss      | Read a data file created by SPSS                                                                         |
++----------------+----------------------------------------------------------------------------------------------------------+
+| read_stata     | Read a data set from Stata file format                                                                   |
++----------------+----------------------------------------------------------------------------------------------------------+
+| read_xml       | Read a table of data from an XML file                                                                    |
++----------------+----------------------------------------------------------------------------------------------------------+
 :::
 
 ## Read Non-Proprietary Data
@@ -282,33 +290,44 @@ The environment in Python is where all your variables, functions, and imported l
 
 ## Explore a Data Frame
 
-::: r-fit-size
-
+::: r-fit-text
++-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | syntax          | example                                | description                                                                                                                                               |
-|-------------|------------------|------------------------------------------|
++=================+========================================+===========================================================================================================================================================+
 | .head()         | reviews.head()                         | displays the first 5 rows of the DataFrame.                                                                                                               |
++-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | .dtypes         | reviews.dtypes                         | shows the data type of each column (e.g., integers, floats, objects).                                                                                     |
++-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | .info()         | reviews.info()                         | provides a summary of the DataFrame, including the number of rows, columns, and the data types for each column, as well as information on missing values. |
++-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | .shape          | reviews.shape                          | returns the dimensions of the DataFrame as a tuple (rows, columns).                                                                                       |
++-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | .columns        | reviews.columns                        | gives you a list of all column names in the DataFrame.                                                                                                    |
++-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | .describe       | reviews.describe()                     | generates summary statistics for numerical columns, such as mean, median, standard deviation, and percentiles.                                            |
++-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | .value_counts() | reviews\["Class_Name"\].value_counts() | counts the occurrences of each unique value in a specified column.                                                                                        |
-
++-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
 :::
 
 ## Descriptive Statistics.
 
-::: r-fit-size
-
+::: r-fit-text
++--------------------+--------------------------+---------------------------------+
 | **syntax**         | example                  | **description**                 |
-|-------------------|------------------------|-----------------------------|
++====================+==========================+=================================+
 | .count()           | reviews.count()          | Total number of items           |
++--------------------+--------------------------+---------------------------------+
 | .first(), .last()  | reviews\['Age'\].first() | First and last item             |
++--------------------+--------------------------+---------------------------------+
 | .mean(), .median() | reviews\['Age'\].mean()  | Mean and median                 |
++--------------------+--------------------------+---------------------------------+
 | .min(), .max()     | reviews\['Age'\].min()   | Minimum and maximum             |
++--------------------+--------------------------+---------------------------------+
 | .std(), .var()     | reviews\['Age'\].std()   | Standard deviation and variance |
++--------------------+--------------------------+---------------------------------+
 | .sum()             |                          | Sum of all items                |
-
++--------------------+--------------------------+---------------------------------+
 :::
 
 ## Cleaning Data
@@ -418,6 +437,8 @@ NOTE: if you name your variable as an *existing variable*, it will *overwrite* t
 
 ## Recode
 
+:::r-fit-text
+
 Transform the values of a variable into new values based on specific criteria
 
 <br>
@@ -447,6 +468,8 @@ reviews_recode
 
 ```
 
+:::
+
 ## Recode Data Values
 
 The .**astype** function will allow you to change the data type of a variable.
@@ -467,7 +490,8 @@ reviews['Clothing_ID'] = reviews['Clothing_ID'].astype("str")
 
 # Recommended_IND, Division_Name, Department_Name, and Class_Name should be a category
 reviews[['Recommended_IND', 'Division_Name', 'Department_Name', 'Class_Name']] = 
-reviews[['Recommended_IND', 'Division_Name', 'Department_Name', 'Class_Name']].astype("category")
+reviews[['Recommended_IND', 'Division_Name', 'Department_Name', 'Class_Name']].
+astype("category")
 
 # view the values
 
@@ -488,8 +512,8 @@ Rename the column
 #| eval: false
 
 reviews = 
-reviews.rename(columns={"Recommended_IND": "Recommended_num", "Recommended_recode":"Recommended_label"})
-
+reviews.rename(columns={"Recommended_IND": "Recommended_num", 
+"Recommended_recode":"Recommended_label"})
 
 reviews
 
@@ -534,10 +558,9 @@ reviews.sort_values(by="Rating", ascending=False)
 
 ```
 
-## Dplyr function: group_by & aggregate
+## Group_by & aggregate
 
-::: r-fit-size
-
+::: r-fit-text
 the **group_by** function allows you to group common observations in a variable
 
 <br />
@@ -567,7 +590,6 @@ result = reviews.groupby('Class_Name', observed=True)[['Rating', 'Positive_Feedb
 result
 
 ```
-
 :::
 
 ## Missing Data
